@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+
+Conclusiones del Ejercicio
+-------------------------------------------------------------------------------
+
+
+1. Automatización Exitosa:
+   La automatización del flujo de compra en SauceDemo se realizó con éxito utilizando Serenity BDD. Las pruebas cubren el inicio de sesión, la adición de productos al carrito, la visualización del carrito y la finalización de la compra.
+
+2. Uso de WebDriverManager:
+   La integración de WebDriverManager simplificó la gestión de las versiones de WebDriver, asegurando que siempre se utilice la versión correcta compatible con el navegador. Hubo problemas iniciales con la compatibilidad de versiones entre Chrome y ChromeDriver, que se resolvieron finalmente utilizando una versión específica de Chrome. La configuración inicial de Serenity BDD y WebDriverManager requería ajustes para asegurar que las pruebas se ejecutaran de manera confiable.
+
+4. Beneficios de la Automatización:
+   - La automatización de pruebas permite una validación rápida y repetible del flujo de compra, mejorando la eficiencia y la confiabilidad del proceso de pruebas.
+   - Los reportes generados por Serenity BDD proporcionan una visión clara y detallada de los resultados de las pruebas, facilitando la identificación de problemas y áreas de mejora.
+
+5. Recomendaciones Futuras:
+   - Implementar pruebas adicionales para cubrir más escenarios de usuario y garantizar una cobertura de pruebas más amplia.
+   - Explorar el uso de Selenium Grid y Docker para ejecutar pruebas en múltiples navegadores y entornos de manera más eficiente.
+   - Continuar actualizando las herramientas y dependencias utilizadas para asegurar la compatibilidad y el rendimiento óptimo.
+
+En general, el ejercicio demostró la efectividad de utilizar Serenity BDD junto con WebDriverManager para automatizar pruebas funcionales, y resaltó la importancia de manejar adecuadamente las versiones de los navegadores y WebDriver.
