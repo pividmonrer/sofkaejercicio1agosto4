@@ -42,3 +42,12 @@ El reporte de las pruebas se encontrará en el directorio del proyecto (target/s
 1. No necesita una versión específica de Chrome para funcionar.
 2. Menos archivos creados
 3. Menos configuración para ejecutar.
+
+## Datos extra configuración
+Configuración adicional para Chrome (En caso de ser necesario):
+1. Deshabilitar la caché del navegador y ejecutar Cypress en modo sin cabeza (headless):
+npx cypress run --browser chrome --headless --config video=false,chromeWebSecurity=false
+
+## Comentario extra
+1. Se añade EVIDENCIA de que tanto las pruebas con Selenium como las de Cypress SÍ FUNCIONAN
+2. Para las pruebas de Selenium es requerido CHROME VERSIÓN 114 o inferiores. 
