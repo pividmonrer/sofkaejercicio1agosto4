@@ -1,0 +1,30 @@
+
+Conclusiones del Ejercicio de Pruebas Automatizadas
+
+1. Introducción
+Debido al inconveniente de tener que usar Chrome 114 o inferior por el ChromeDriver, se decide pasar el ejercicio a Cypress.
+
+2. Problemas con Selenium y SerenityBDD
+Inicialmente, se utilizó Selenium y SerenityBDD para escribir las pruebas. El problema principal que se encontró fue que el ChromeDriver utilizado solo soportaba hasta la versión 114 de Chrome. Esto causó que las pruebas no pudieran ejecutarse en versiones más recientes de Chrome (por ejemplo, la versión 127, que es con la que se contaba en el PC). 
+
+3. Migración a Cypress
+Para superar estas limitaciones, se migraron las pruebas a Cypress, un framework de pruebas que no depende de un WebDriver específico y, por lo tanto, no está limitado por las versiones del navegador. Cypress proporciona un entorno de prueba más robusto y flexible para aplicaciones web.
+
+4. Problemas con Cypress
+Al usar Cypress, se encontraron varios problemas iniciales:
+- Errores 401 (Unauthorized) en las solicitudes POST, lo que impedía que las pruebas avanzaran.
+- Las pruebas funcionaban correctamente en el navegador Electron, pero fallaban en Chrome y Edge después de la primera ejecución.
+
+5. Soluciones Implementadas
+Para resolver estos problemas, se ha implementado lo siguiente:
+- Interceptación de todas las solicitudes POST y devolución de una respuesta exitosa para evitar errores de autenticación.
+- Limpieza de cookies y almacenamiento local antes de cada prueba para evitar conflictos de datos persistentes.
+- Deshabilitar la caché del navegador y ejecutar Cypress en modo sin cabeza (headless) para mejorar la estabilidad de las pruebas en Chrome.
+- Aumentar los tiempos de espera en la configuración de Cypress para asegurar que las páginas se carguen completamente antes de ejecutar las pruebas.
+
+6. Resultados
+Después de implementar estas soluciones, las pruebas se ejecutaron correctamente en todos los navegadores compatibles con Cypress, incluyendo Chrome y Edge. Las pruebas automatizadas fueron capaces de completar el flujo de compra en SauceDemo de manera consistente y confiable.
+
+7. Conclusión
+La migración a Cypress es una solución efectiva para los problemas de compatibilidad de versiones de navegador que enfrentamos con Selenium y SerenityBDD. Cypress proporciona un entorno de prueba más moderno y flexible que facilita la ejecución de pruebas E2E en una amplia gama de versiones de navegador sin depender de WebDrivers específicos. Aunque a título personal, no cuento con mucha experiencia en Cypress, creo que se ha podido evidenciar que las pruebas funcionan.
+
